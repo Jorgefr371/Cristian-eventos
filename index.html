@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Eventos Cristian ⚡ El que sí cumple | Rifas de motos y carros en Cúcuta</title>
+<meta name="description" content="Eventos Cristian: rifas de motos y carros desde Cúcuta con envíos a toda Colombia. Entregas reales. 😎 El que sí cumple.">
+<link rel="preload" as="image" href="assets/img/hero-m.webp" media="(max-width:767px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/hero.webp" media="(min-width:768px)" fetchpriority="high">
+<link rel="preload" href="assets/fonts/bangers-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/outfit-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#07070a">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/boot.js"></script>
+<script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="cursor-glow" id="glow"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="logo" aria-label="Eventos Cristian - inicio"><span>EVENTOS</span><span>CRISTIAN</span></a>
+    <ul class="nav-links">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#como">Cómo jugar</a></li>
+      <li><a href="#numeros">Números</a></li>
+      <li><a href="#entregas">Entregas</a></li>
+      <li><a href="#proximos">Próximos sorteos</a></li>
+      <li><a href="#verifica">Verifica</a></li>
+    </ul>
+    <a href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Quiero participar ⚡</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mmenu" aria-hidden="true">
+  <a href="#nosotros">Nosotros</a>
+  <a href="#como">Cómo jugar</a>
+  <a href="#numeros">Números</a>
+  <a href="#entregas">Entregas</a>
+  <a href="#proximos">Próximos sorteos</a>
+  <a href="#verifica">Verifica</a>
+  <a href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer" class="btn btn-wa mm-cta">Escríbenos al WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="inicio">
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width:767px)" srcset="assets/img/hero-m.webp" width="640" height="854">
+      <img id="heroBg" src="assets/img/hero.webp" width="1280" height="723" alt="" fetchpriority="high">
+    </picture>
+  </div>
+  <canvas id="confetti"></canvas>
+  <div class="wrap">
+    <div class="hero-badge"><span class="dot">⚡</span> Rifas de motos y carros · Cúcuta · Envíos a toda Colombia 🇨🇴</div>
+    <h1 class="hero-brand display">
+      <span class="l1 outline">EVENTOS</span>
+      <span class="l2 outline-w">CRISTIAN</span>
+    </h1>
+    <div class="slogan" id="slogan" role="text" aria-label="El que sí cumple">
+      <span class="emoji">😎</span><span class="txt">EL QUE SÍ CUMPLE</span>
+    </div>
+    <p class="hero-sub">Motos y carros <strong>0 kilómetros</strong> por el valor de una boleta. Números de <strong>2 cifras</strong>, entregas reales y publicadas. Dios primero 🙏🏼</p>
+    <div class="hero-cta">
+      <a href="#numeros" class="btn btn-gold">🎟️ Escoge tu número</a>
+      <a href="#proximos" class="btn btn-ghost">Ver próximos sorteos →</a>
+    </div>
+    <div class="hero-social">
+      <a class="s" href="https://www.instagram.com/eventoscristian_/" target="_blank" rel="noopener noreferrer">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+        <span><b><span data-count="14.4" data-dec="1">0</span> mil</b><small>en Instagram</small></span>
+      </a>
+      <a class="s" href="https://www.facebook.com/profile.php?id=61571862735452" target="_blank" rel="noopener noreferrer">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></span>
+        <span><b><span data-count="8.8" data-dec="1">0</span> mil</b><small>en Facebook</small></span>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-hint"><i></i>Scroll</div>
+</header>
+
+<div class="mq-wrap">
+<div class="marquee" data-anim><div class="marquee-track" id="mq1"></div></div>
+<div class="marquee alt" data-anim><div class="marquee-track" id="mq2"></div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="nosotros">
+  <div class="wrap about-grid">
+    <div class="about-media rv l">
+      <div class="ph p1"><img src="assets/img/cristian-motos.webp" width="900" height="900" decoding="async" alt="Cristian entregando las llaves de dos motos nuevas" loading="lazy"></div>
+      <div class="ph p2" data-parallax="-0.08"><img src="assets/img/cristian-carro.webp" width="900" height="900" decoding="async" alt="Cristian sobre el carro del sorteo" loading="lazy"></div>
+      <div class="sticker" data-anim>
+        <svg viewBox="0 0 130 130"><defs><path id="circ" d="M65,65 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text font-family="Outfit" font-weight="800" font-size="11.5" letter-spacing="3.2" fill="#ffc21a"><textPath href="#circ">EL QUE SÍ CUMPLE • EL QUE SÍ CUMPLE •</textPath></text></svg>
+        <b>😎</b>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow rv">Quién es Cristian</span>
+      <h2 class="sec-title display rv">SOÑAR <span class="gold">SÍ</span> PAGA</h2>
+      <p class="rv">Desde <strong>Cúcuta</strong> para toda Colombia 🇨🇴. En Eventos Cristian rifamos <strong>motos y carros</strong> con números de dos cifras, y cada entrega se muestra en nuestras redes para que veas que aquí la palabra se cumple.</p>
+      <p class="rv">Nuestra filosofía es sencilla: <strong>Dios primero 🙏🏼</strong>, transparencia con cada participante y llaves en la mano del ganador.</p>
+      <div class="stats stg">
+        <div class="stat"><div class="num"><span data-count="14.4" data-dec="1">0</span>K</div><div class="lbl">Seguidores en Instagram</div></div>
+        <div class="stat"><div class="num"><span data-count="8.8" data-dec="1">0</span>K</div><div class="lbl">Seguidores en Facebook</div></div>
+        <div class="stat"><div class="num"><span data-count="100">0</span></div><div class="lbl">Números por sorteo (00–99)</div></div>
+      </div>
+      <div class="values stg">
+        <span>🙏🏼 Dios primero</span><span>🏍️ Entregas reales</span><span>🎯 2 cifras</span><span>🙌 Obras</span><span>🇨🇴 Envíos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="section how" id="como">
+  <div class="wrap">
+    <span class="eyebrow rv">Así de fácil</span>
+    <h2 class="sec-title display rv">¿CÓMO <span class="outline">PARTICIPO?</span></h2>
+    <p class="sec-sub rv">Cuatro pasos entre tú y tu próxima moto o carro.</p>
+    <div class="steps stg">
+      <div class="step"><div class="n">1</div><h3>Escoge tu número</h3><p>Elige uno o varios números del 00 al 99 aquí abajo o pídelo directo por WhatsApp.</p></div>
+      <div class="step"><div class="n">2</div><h3>Apártalo por WhatsApp</h3><p>Escríbenos al 322 205 3255, confirma disponibilidad y el valor de la boleta del sorteo activo.</p></div>
+      <div class="step"><div class="n">3</div><h3>Sigue el sorteo</h3><p>Síguenos en Instagram y Facebook, allí publicamos cada sorteo y su resultado.</p></div>
+      <div class="step"><div class="n">4</div><h3>¡Recibe tus llaves!</h3><p>Si ganas, te entregamos el premio. Hacemos envíos a toda Colombia 🇨🇴.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PICKER -->
+<section class="section" id="numeros">
+  <div class="wrap">
+    <span class="eyebrow rv">Interactivo</span>
+    <h2 class="sec-title display rv">TU NÚMERO DE LA <span class="gold">SUERTE</span></h2>
+    <p class="sec-sub rv">Gira la balotera para que la suerte escoja por ti, o arma tu combinación en el tablero. Cuando estés listo, la envías por WhatsApp en un clic.</p>
+    <div class="picker-grid">
+      <div class="drum-card rv s" id="drum">
+        <img src="assets/img/balotera.webp" width="900" height="900" decoding="async" alt="Balotera dorada con balotas numeradas" loading="lazy">
+        <div class="drum-overlay">
+          <div class="lucky-ball" id="luckyBall">??</div>
+          <p id="luckyTxt">¿No sabes cuál escoger? Deja que la balotera decida.</p>
+          <button type="button" class="btn btn-gold" id="spinBtn">🎰 Girar la balotera</button>
+        </div>
+      </div>
+      <div class="board rv r">
+        <div class="board-head">
+          <div><h3>Tablero 00 – 99</h3><small>Toca para seleccionar</small></div>
+          <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="numSearch" type="text" inputmode="numeric" pattern="[0-9]{0,2}" maxlength="2" autocomplete="off" spellcheck="false" placeholder="Buscar nº" aria-label="Buscar número"></label>
+        </div>
+        <div class="nums" id="nums"></div>
+        <div class="cart">
+          <div class="chips" id="chips"><span class="empty">Aún no has escogido números</span></div>
+          <div class="cart-actions">
+            <button type="button" class="btn-clear" id="clearBtn">Limpiar</button>
+            <a class="btn btn-wa btn-sm" id="sendBtn" href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+              Apartar por WhatsApp
+            </a>
+          </div>
+        </div>
+        <p class="note">* La disponibilidad de cada número se confirma por WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERIES -->
+<section class="section pt-sm" id="entregas">
+  <div class="wrap">
+    <span class="eyebrow rv">Pruebas, no promesas</span>
+    <h2 class="sec-title display rv">ENTREGAS <span class="outline">REALES</span></h2>
+    <p class="sec-sub rv">Aquí no se habla, se entrega. Cada premio sale con sus llaves en la mano del ganador y lo publicamos en nuestras redes.</p>
+    <div class="deliv-grid">
+      <div class="deliv rv s" data-tilt>
+        <img src="assets/img/cristian-motos.webp" width="900" height="900" decoding="async" alt="Entrega de dos motos Yamaha nuevas" loading="lazy">
+        <div class="shine"></div>
+        <div class="tag"><b>MOTOS 🏍️</b><span>Llaves en mano</span></div>
+      </div>
+      <div class="deliv rv s delay-1" data-tilt>
+        <img src="assets/img/cristian-carro.webp" width="900" height="900" decoding="async" alt="Entrega de carro Hyundai blanco" loading="lazy">
+        <div class="shine"></div>
+        <div class="tag"><b>CARROS 🚗</b><span>0 kilómetros</span></div>
+      </div>
+    </div>
+    <div class="ig-cta rv"><a href="https://www.instagram.com/eventoscristian_/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Ver todas las entregas en Instagram →</a></div>
+  </div>
+</section>
+
+<!-- FUTURE -->
+<section class="section future" id="proximos">
+  <div class="glow" data-parallax="0.15"></div>
+  <div class="wrap">
+    <div class="future-head">
+      <div>
+        <span class="eyebrow rv">Lo que viene</span>
+        <h2 class="sec-title display rv">POSIBLES <span class="gold">SORTEOS</span><br><span class="outline-w">FUTUROS</span></h2>
+        <p class="sec-sub rv">Estos son los premios que tenemos en la mira. Dale la vuelta a cada tarjeta y <strong class="white">vota por el que quieres que rifemos primero</strong>.</p>
+      </div>
+      <div class="filters rv" id="filters">
+        <span class="pill" id="pill"></span>
+        <button type="button" class="on" data-f="all" aria-pressed="true">Todos</button>
+        <button type="button" data-f="moto" aria-pressed="false">Motos</button>
+        <button type="button" data-f="carro" aria-pressed="false">Carros</button>
+      </div>
+    </div>
+
+    <div class="fcards stg" id="fcards">
+      <div class="fcard" data-cat="moto" data-id="naked" tabindex="0" role="button" aria-pressed="false" aria-label="Deportiva naked: ver detalles">
+        <div class="flip">
+          <div class="face front">
+            <img src="assets/img/moto-sport.webp" width="720" height="900" decoding="async" alt="Moto deportiva naked negra y amarilla" loading="lazy">
+            <span class="status"><i></i>Próximamente</span>
+            <div class="info"><div class="cat">Moto</div><h3>DEPORTIVA NAKED</h3><span class="flip-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></svg>Toca para ver más</span></div>
+          </div>
+          <div class="face back">
+            <div class="cat">Moto</div><h3>DEPORTIVA NAKED</h3>
+            <p>Para los que quieren adrenalina en cada semáforo.</p>
+            <ul><li>Estilo agresivo y urbano</li><li>Ideal para ciudad y carretera</li><li>0 kilómetros</li></ul>
+            <a class="btn btn-gold btn-sm vote" href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer">🔥 ¡La quiero!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="moto" data-id="adventure" tabindex="0" role="button" aria-pressed="false" aria-label="Adventure touring: ver detalles">
+        <div class="flip">
+          <div class="face front">
+            <img src="assets/img/moto-adventure.webp" width="720" height="900" decoding="async" alt="Moto adventure en carretera de montaña" loading="lazy">
+            <span class="status"><i></i>Próximamente</span>
+            <div class="info"><div class="cat">Moto</div><h3>ADVENTURE TOURING</h3><span class="flip-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></svg>Toca para ver más</span></div>
+          </div>
+          <div class="face back">
+            <div class="cat">Moto</div><h3>ADVENTURE TOURING</h3>
+            <p>Para recorrer Colombia de punta a punta.</p>
+            <ul><li>Lista para carretera y trocha</li><li>Postura cómoda para viajes</li><li>0 kilómetros</li></ul>
+            <a class="btn btn-gold btn-sm vote" href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer">🔥 ¡La quiero!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fcard" data-cat="carro" data-id="pickup" tabindex="0" role="button" aria-pressed="false" aria-label="Camioneta 4x4: ver detalles">
+        <div class="flip">
+          <div class="face front">
+            <img src="assets/img/pickup.webp" width="720" height="900" decoding="async" alt="Camioneta pickup negra y azul" loading="lazy">
+            <span class="status"><i></i>El gran sueño</span>
+            <div class="info"><div class="cat">Carro</div><h3>CAMIONETA 4X4</h3><span class="flip-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7L21 8M21 3v5h-5"/></svg>Toca para ver más</span></div>
+          </div>
+          <div class="face back">
+            <div class="cat">Carro</div><h3>CAMIONETA 4X4</h3>
+            <p>El premio mayor que todos quieren ver rodando.</p>
+            <ul><li>Doble cabina</li><li>Para trabajo y familia</li><li>0 kilómetros</li></ul>
+            <a class="btn btn-gold btn-sm vote" href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer">🔥 ¡La quiero!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="fcard suggest" data-cat="all" data-id="suggest">
+        <div class="flip">
+          <div class="face front">
+            <div class="big">🤔</div>
+            <h3 class="display suggest-title">¿Y TÚ QUÉ QUIERES?</h3>
+            <p>¿Tienes en mente otra moto o carro? Propónlo y lo tenemos en cuenta para los próximos sorteos.</p>
+            <a class="btn btn-gold btn-sm" href="https://wa.me/573222053255?text=Hola%20Cristian%20%F0%9F%98%8E%2C%20quiero%20proponer%20un%20premio%20para%20un%20pr%C3%B3ximo%20sorteo%3A%20" target="_blank" rel="noopener noreferrer">Proponer premio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="fut-note rv">* Premios en evaluación. Las imágenes son ilustrativas; el modelo, la fecha y el valor de la boleta se anuncian en nuestras redes.</p>
+
+    <div class="countdown-band rv s" id="cdBand">
+      <div>
+        <h3 id="cdTitle">¡NO TE QUEDES POR FUERA!</h3>
+        <p id="cdText">Activa las notificaciones en Instagram y sé el primero en enterarte del próximo sorteo.</p>
+      </div>
+      <div class="cd" id="cd" hidden>
+        <div><b id="cdD">00</b><small>Días</small></div>
+        <div><b id="cdH">00</b><small>Horas</small></div>
+        <div><b id="cdM">00</b><small>Min</small></div>
+        <div><b id="cdS">00</b><small>Seg</small></div>
+      </div>
+      <a id="cdBtn" href="https://www.instagram.com/eventoscristian_/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Seguir en Instagram ⚡</a>
+    </div>
+  </div>
+</section>
+
+<!-- VERIFY -->
+<section class="section" id="verifica">
+  <div class="wrap">
+    <span class="eyebrow rv">Juega seguro</span>
+    <h2 class="sec-title display rv">¿ES <span class="gold">OFICIAL?</span> VERIFÍCALO</h2>
+    <p class="sec-sub rv">Solo vendemos por nuestros canales oficiales. Si alguien te ofrece boletas desde otro número, <strong class="white">no es Eventos Cristian</strong>.</p>
+    <div class="verify-box">
+      <div class="official rv l">
+        <a href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer">
+          <span class="ic ic-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg></span>
+          <span><b>WhatsApp oficial</b><small>+57 322 205 3255</small></span><span class="ok">✔ Oficial</span>
+        </a>
+        <a href="https://www.instagram.com/eventoscristian_/" target="_blank" rel="noopener noreferrer">
+          <span class="ic ic-ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+          <span><b>Instagram</b><small>@eventoscristian_</small></span><span class="ok">✔ Oficial</span>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61571862735452" target="_blank" rel="noopener noreferrer">
+          <span class="ic ic-fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></span>
+          <span><b>Facebook</b><small>EventosCristian</small></span><span class="ok">✔ Oficial</span>
+        </a>
+      </div>
+      <div class="checker rv r">
+        <h3>🛡️ Verificador de número</h3>
+        <p>¿Te escribieron ofreciendo boletas? Pega aquí el número y te decimos si es el oficial.</p>
+        <form id="checkForm" novalidate>
+          <input id="checkInput" type="tel" inputmode="tel" maxlength="20" autocomplete="off" spellcheck="false" placeholder="Ej: 322 205 3255" aria-label="Número a verificar" aria-describedby="checkResult">
+          <button class="btn btn-gold" type="submit">Verificar</button>
+        </form>
+        <div class="result" id="checkResult" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section pt-sm" id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow rv">Dudas</span>
+      <h2 class="sec-title display rv">PREGUNTAS <span class="outline">FRECUENTES</span></h2>
+    </div>
+    <div class="faq stg">
+      <div class="qa"><button>¿Cómo compro mi boleta?<span class="pm"></span></button><div class="ans"><div><p>Escoge tu número en el tablero de esta página o escríbenos directamente al WhatsApp oficial 322 205 3255. Allí te confirmamos disponibilidad, valor y forma de pago.</p></div></div></div>
+      <div class="qa"><button>¿Cuánto vale la boleta?<span class="pm"></span></button><div class="ans"><div><p>Cada sorteo tiene su propio valor según el premio. Lo anunciamos en Instagram y Facebook, y te lo confirmamos por WhatsApp.</p></div></div></div>
+      <div class="qa"><button>¿Cómo sé que los sorteos son reales?<span class="pm"></span></button><div class="ans"><div><p>Todas las entregas se publican en nuestras redes (mira las historias destacadas de "Entregas" en Instagram). El que sí cumple 😎.</p></div></div></div>
+      <div class="qa"><button>¿Si no vivo en Cúcuta puedo participar?<span class="pm"></span></button><div class="ans"><div><p>¡Claro! Participas desde cualquier parte y hacemos envíos a toda Colombia 🇨🇴.</p></div></div></div>
+      <div class="qa"><button>¿Otra persona me ofreció boletas, es de ustedes?<span class="pm"></span></button><div class="ans"><div><p>Usa el verificador de esta página. Solo vendemos por el WhatsApp oficial y nuestras redes; ante cualquier duda, escríbenos antes de pagar.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="contact-card rv s">
+      <div class="bg" data-parallax="0.08"><img src="assets/img/moto-adventure.webp" width="1400" height="1750" alt="" loading="lazy" decoding="async"></div>
+      <span class="eyebrow">Tu turno</span>
+      <h2 class="display outline-w">¿LISTO PARA GANAR?</h2>
+      <p>Escríbenos, aparta tu número y prepárate para recibir tus llaves. 😎 El que sí cumple.</p>
+      <a href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer" class="phone">322 205 3255</a>
+      <div class="contact-actions">
+        <a href="https://wa.me/573222053255?text=Hola%20Cristian%20%F0%9F%98%8E%2C%20quiero%20participar%20en%20el%20sorteo" target="_blank" rel="noopener noreferrer" class="btn btn-wa confetti-btn">Escribir por WhatsApp</a>
+        <a href="https://www.instagram.com/eventoscristian_/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61571862735452" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a href="#inicio" class="logo"><span>EVENTOS</span><span>CRISTIAN</span></a>
+      <div class="motto">Cúcuta, Colombia · Dios primero 🙏🏼 · Envíos 🇨🇴</div>
+      <div class="soc">
+        <a href="https://www.instagram.com/eventoscristian_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61571862735452" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></svg></a>
+        <a href="https://wa.me/573222053255" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8z"/></svg></a>
+      </div>
+      <p class="legal">© <span id="year"></span> Eventos Cristian. Solo mayores de edad. Juega con responsabilidad.</p>
+    </div>
+  </footer>
+</section>
+
+<a class="fab" id="fab" href="https://wa.me/573222053255?text=Hola%20Cristian%20%F0%9F%98%8E" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+  <span class="bubble">¿Apartamos tu número? 😎</span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+</a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
